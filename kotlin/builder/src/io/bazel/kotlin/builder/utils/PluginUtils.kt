@@ -65,8 +65,8 @@ class PluginArgs private constructor(private val kapt: CompilerPlugin) {
                         PluginArgs(ctx.toolchain.KAPT_PLUGIN).let { arg ->
                             arg["sources"] = ctx.flags.sourceGenDir.value.toString()
                             arg["classes"] = ctx.flags.classDir.value.toString()
-                            arg["stubs"] = ctx.flags.tempDirPath.value.toString()
-                            arg["incrementalData"] = ctx.flags.tempDirPath.value.toString()
+                            arg["stubs"] = ctx.flags.tempDir.value.toString()
+                            arg["incrementalData"] = ctx.flags.tempDir.value.toString()
 
                             arg["aptMode"] = "stubsAndApt"
                             arg["correctErrorTypes"] = "true"
