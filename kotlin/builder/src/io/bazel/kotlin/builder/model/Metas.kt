@@ -15,6 +15,7 @@
  */
 package io.bazel.kotlin.builder.model
 
+import com.google.devtools.build.lib.view.proto.Deps
 import io.bazel.kotlin.builder.MandatoryMeta
 
 /**
@@ -25,4 +26,6 @@ object Metas {
     val PKG = MandatoryMeta<String>("package")
     // The target part of the label.
     val TARGET = MandatoryMeta<String>("target")
+
+    val JDEPS = MandatoryMeta<Deps.Dependencies>("jdeps")
 }
